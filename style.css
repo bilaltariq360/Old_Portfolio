@@ -143,9 +143,8 @@ article a::after {
 /* basic article elements styling */
 article h2 {
   margin: 0 0 18px 0;
-  font-family: "Bebas Neue", cursive;
-  font-size: 1.9rem;
-  letter-spacing: 0.06em;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
   color: var(--title-color);
   transition: color 0.3s ease-out;
 }
@@ -199,9 +198,12 @@ article:has(:hover, :focus) {
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-/************************ 
-Generic layout (demo looks)
-**************************/
+.project-header {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 4rem;
+}
 
 .articles {
   display: grid;
