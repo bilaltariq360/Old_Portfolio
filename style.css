@@ -12,6 +12,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background: #080808;
+  color: #ffffff84;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -58,7 +63,7 @@ nav a.active {
 }
 
 #home h2 {
-  font-size: 8rem;
+  font-size: 7rem;
   letter-spacing: 2rem;
   font-weight: 100;
   color: #ffffff84;
@@ -69,7 +74,7 @@ nav a.active {
 
 #home p {
   font-size: 3rem;
-  color: #fff;
+  color: #ffffff84;
   font-weight: 100;
   padding-top: 20rem;
   position: absolute;
@@ -127,6 +132,7 @@ article {
   border-radius: 16px;
   box-shadow: none;
   background: #fff;
+  color: #080808;
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -171,11 +177,11 @@ article a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #28666e;
+  color: #426edc;
 }
 
 article a:focus {
-  outline: 1px dotted #28666e;
+  outline: 1px dotted #426edc;
 }
 
 article a .icon {
@@ -191,7 +197,7 @@ article a .icon {
 /* using the has() relational pseudo selector to update our custom properties */
 article:has(:hover, :focus) {
   --img-scale: 1.1;
-  --title-color: #28666e;
+  --title-color: #426edc;
   --link-icon-translate: 0;
   --link-icon-opacity: 1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
@@ -199,8 +205,8 @@ article:has(:hover, :focus) {
 }
 
 .project-header {
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
   text-align: center;
   font-size: 4rem;
 }
