@@ -549,7 +549,7 @@ article:has(:hover, :focus) {
     font-size: 0.8rem;
   }
   #portfolio p {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
   }
   .copyright-text {
     font-size: 0.7rem;
