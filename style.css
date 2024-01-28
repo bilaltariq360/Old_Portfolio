@@ -46,8 +46,7 @@ nav a {
   margin-left: 35px;
 }
 
-nav a:hover,
-nav a.active {
+nav a:hover {
   color: #fff;
 }
 
@@ -148,38 +147,36 @@ nav {
 .mobile-menu-icon {
   display: none; /* Initially hide the hamburger icon */
 }
+nav {
+  display: none; /* Hide the navigation links on smaller screens */
+}
 
-@media screen and (max-width: 950px) {
-  nav {
-    display: none; /* Hide the navigation links on smaller screens */
-  }
+.mobile-menu-icon {
+  display: block; /* Display the hamburger icon on smaller screens */
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
 
-  .mobile-menu-icon {
-    display: block; /* Display the hamburger icon on smaller screens */
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-  }
+header {
+  padding: 30px 60px 12px;
+}
 
-  header {
-    padding: 20px;
-  }
+nav.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 99;
+  background: #080808e8;
+}
 
-  nav.show {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background: transparent;
-    z-index: 99;
-  }
-
-  nav.show a {
-    margin: 30px 0;
-    text-align: center;
-  }
+nav.show a {
+  margin: 30px 0;
+  text-align: center;
 }
 article {
   --img-scale: 1.001;
@@ -514,4 +511,40 @@ article:has(:hover, :focus) {
 
 .braindev {
   color: #426edc;
+}
+
+@media screen and (max-width: 600px) {
+  #home img {
+    padding-top: 220px;
+    width: 50%;
+    height: 50%;
+  }
+  #home h2 {
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 50px;
+  }
+  #home p {
+    padding-top: 550px;
+    font-size: 2.5rem;
+  }
+  .header {
+    font-size: 2.3rem;
+  }
+  .RadialProgress-1,
+  .RadialProgress-2,
+  .RadialProgress-3 {
+    block-size: 10vmin;
+    inline-size: 10vmin;
+    font-size: max(3vmin, 1rem);
+  }
+  .skill p {
+    font-size: 0.8rem;
+  }
+  .article-body h2 {
+    font-size: 1.3rem;
+  }
+  .article-body a {
+    font-size: 0.8rem;
+  }
 }
