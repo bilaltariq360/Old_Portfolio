@@ -112,7 +112,7 @@ nav a.active {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding-top: 10rem;
+  padding-top: 8rem;
   font-size: 10rem;
   color: #ffffffd5;
   /* font-family: "Londrina Outline", sans-serif; */
@@ -134,7 +134,7 @@ nav a.active {
   font-size: 3rem;
   color: #ffffff84;
   font-weight: 100;
-  padding-top: 20rem;
+  padding-top: 21rem;
   position: absolute;
 }
 
@@ -424,7 +424,7 @@ article:has(:hover, :focus) {
   font-size: 1.2rem;
 }
 .blockquote {
-  padding: 60px 80px 40px;
+  padding: 60px 80px 0px 80px;
   position: relative;
 }
 .blockquote p {
@@ -438,7 +438,6 @@ article:has(:hover, :focus) {
   position: absolute;
   font-family: "FontAwesome";
   top: 0;
-
   content: "\f10d";
   font-size: 200px;
   color: rgba(0, 0, 0, 0.1);
@@ -454,13 +453,12 @@ article:has(:hover, :focus) {
   height: 3px;
   width: 200px;
 }
-#contact {
+#contact-sec {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20rem;
 }
-#contact a {
+#contact-sec a {
   text-decoration: none;
 }
 .contact-btn {
@@ -477,8 +475,43 @@ article:has(:hover, :focus) {
 }
 .contact-btn:hover {
   background: #426edc;
+  font-size: 1.1rem;
 }
 .contact-btn i {
   color: #ffffff84;
   font-size: 1rem;
+}
+.footer-hr {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-hr hr {
+  margin-top: 20rem;
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  height: 0.1rem;
+  background-color: #ffffff84;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.copyright {
+  width: 80%;
+}
+
+.copyright-text {
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.braindev {
+  color: #426edc;
 }
