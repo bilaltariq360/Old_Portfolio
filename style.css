@@ -408,6 +408,7 @@ article:has(:hover, :focus) {
   justify-content: space-evenly;
   align-items: center;
 }
+
 .skill {
   display: flex;
   flex-direction: column;
@@ -447,6 +448,12 @@ article:has(:hover, :focus) {
   border-bottom: 3px solid #bf0024;
   height: 3px;
   width: 200px;
+}
+#portfolio marquee {
+  padding-top: 35px;
+}
+#portfolio .sp {
+  padding-left: 30px;
 }
 #contact-sec {
   display: flex;
@@ -552,6 +559,6 @@ article:has(:hover, :focus) {
     font-size: 0.8rem;
   }
   .copyright-text {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
