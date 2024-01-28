@@ -44,17 +44,15 @@ let menuToogle = false;
 mobileMenuIcon.addEventListener("click", () => {
   nav.classList.toggle("show");
   if (!menuToogle) {
-    header.style.background = "#080808e8";
     menuToogle = !menuToogle;
     mobileMenuIcon.innerHTML = "&#x2716;";
   } else {
-    header.style.background = "transparent";
     menuToogle = !menuToogle;
     mobileMenuIcon.innerHTML = "&#9776;";
   }
 });
 
-navLinks.addEventListener("click", () => {
-  if (menuToogle) nav.classList.toggle("show");
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  header.classList.toggle("scroll", window.scrollY > 0);
 });
-
