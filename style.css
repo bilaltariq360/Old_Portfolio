@@ -522,10 +522,10 @@ article:has(:hover, :focus) {
   #home h2 {
     font-size: 4rem;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 40px;
   }
   #home p {
-    padding-top: 550px;
+    padding-top: 540px;
     font-size: 2.5rem;
   }
   .header {
