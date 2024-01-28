@@ -15,6 +15,7 @@
 body {
   background: #080808;
   color: #ffffff84;
+  user-select: none;
 }
 
 header {
@@ -50,6 +51,63 @@ nav a.active {
   color: #fff;
 }
 
+/* Floating Social Media Bar Style Starts Here */
+
+.fl-fl {
+  background: #426edc;
+  padding: 4px;
+  width: 13rem;
+  position: fixed;
+  right: -160px;
+  z-index: 1000;
+  font-size: 0.8rem;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.sm-fa {
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 10px 0;
+  width: 40px;
+  margin-left: 8px;
+}
+
+.fl-fl:hover {
+  right: 0;
+}
+
+.fl-fl a {
+  color: #fff !important;
+  text-decoration: none;
+  text-align: center;
+  line-height: 43px !important;
+  vertical-align: top !important;
+}
+
+.float-li {
+  top: 160px;
+}
+
+.float-gh {
+  top: 215px;
+}
+
+.float-tw {
+  top: 270px;
+}
+
+.float-gm {
+  top: 325px;
+}
+
+.float-ig {
+  top: 380px;
+}
+/* Floating Social Media Bar Style Ends Here */
 #home {
   min-height: 100vh;
   display: flex;
@@ -129,7 +187,7 @@ article {
   --link-icon-translate: -20px;
   --link-icon-opacity: 0;
   position: relative;
-  border-radius: 16px;
+  border-radius: 12px;
   box-shadow: none;
   background: #fff;
   color: #080808;
@@ -196,7 +254,7 @@ article a .icon {
 
 /* using the has() relational pseudo selector to update our custom properties */
 article:has(:hover, :focus) {
-  --img-scale: 1.1;
+  --img-scale: 1.2;
   --title-color: #426edc;
   --link-icon-translate: 0;
   --link-icon-opacity: 1;
@@ -204,13 +262,15 @@ article:has(:hover, :focus) {
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.project-header {
+.header {
   padding-top: 8rem;
   padding-bottom: 5rem;
   text-align: center;
   font-size: 4rem;
 }
-
+.header .arrow {
+  color: #426edc;
+}
 .articles {
   display: grid;
   max-width: 1200px;
@@ -258,4 +318,167 @@ article:has(:hover, :focus) {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+.RadialProgress-1,
+.RadialProgress-2,
+.RadialProgress-3 {
+  --hue: 220;
+  --holesize: 67%;
+  --track-bg: hsl(233 34% 92%);
+
+  block-size: 25vmin;
+  inline-size: 25vmin;
+  min-inline-size: 100px;
+  min-block-size: 100px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  font-weight: 700;
+  font-size: max(5vmin, 1rem);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(
+      #426edc,
+      #426edc,
+      #426edc,
+      var(--track-bg) var(--progress, 85%) 100%
+    );
+
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      black calc(var(--holesize) + 0.5px)
+    );
+  }
+}
+
+.RadialProgress-2 {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(
+      #426edc,
+      #426edc,
+      #426edc,
+      var(--track-bg) var(--progress, 70%) 100%
+    );
+
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      black calc(var(--holesize) + 0.5px)
+    );
+  }
+}
+
+.RadialProgress-3 {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(
+      #426edc,
+      #426edc,
+      #426edc,
+      var(--track-bg) var(--progress, 90%) 100%
+    );
+
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      black calc(var(--holesize) + 0.5px)
+    );
+  }
+}
+
+#skills-sec {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill p {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+.blockquote {
+  padding: 60px 80px 40px;
+  position: relative;
+}
+.blockquote p {
+  font-family: "Utopia-italic";
+  font-size: 35px;
+  font-weight: 700px;
+  text-align: center;
+}
+
+.blockquote:before {
+  position: absolute;
+  font-family: "FontAwesome";
+  top: 0;
+
+  content: "\f10d";
+  font-size: 200px;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.blockquote::after {
+  content: "";
+  top: 20px;
+  left: 50%;
+  margin-left: -100px;
+  position: absolute;
+  border-bottom: 3px solid #bf0024;
+  height: 3px;
+  width: 200px;
+}
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rem;
+}
+#contact a {
+  text-decoration: none;
+}
+.contact-btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: #426edc 2px solid;
+  color: #ffffff84;
+  width: 12rem;
+  height: 3rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.contact-btn:hover {
+  background: #426edc;
+}
+.contact-btn i {
+  color: #ffffff84;
+  font-size: 1rem;
 }
