@@ -114,7 +114,6 @@ nav a:hover {
   padding-top: 8rem;
   font-size: 10rem;
   color: #ffffffd5;
-  /* font-family: "Londrina Outline", sans-serif; */
   font-family: Neon;
   background: linear-gradient(to right, #080808 50%, #426edc 50%);
 }
@@ -145,14 +144,14 @@ nav {
 }
 
 .mobile-menu-icon {
-  display: none; /* Initially hide the hamburger icon */
+  display: none;
 }
 nav {
-  display: none; /* Hide the navigation links on smaller screens */
+  display: none;
 }
 
 .mobile-menu-icon {
-  display: block; /* Display the hamburger icon on smaller screens */
+  display: block;
   font-size: 24px;
   color: #fff;
   cursor: pointer;
@@ -425,7 +424,7 @@ article:has(:hover, :focus) {
   position: relative;
 }
 .blockquote p {
-  font-family: "Utopia-italic";
+  font-family: serif;
   font-size: 35px;
   font-weight: 700px;
   text-align: center;
@@ -433,7 +432,6 @@ article:has(:hover, :focus) {
 
 .blockquote:before {
   position: absolute;
-  font-family: "FontAwesome";
   top: 0;
   content: "\f10d";
   font-size: 200px;
@@ -514,6 +512,9 @@ article:has(:hover, :focus) {
 }
 
 @media screen and (max-width: 600px) {
+  header {
+    padding: 30px 22px 12px;
+  }
   #home img {
     padding-top: 220px;
     width: 60%;
@@ -549,9 +550,8 @@ article:has(:hover, :focus) {
   }
   #portfolio p {
     font-size: 1.5rem;
-    text-align: justify;
   }
   .copyright-text {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
   }
 }
