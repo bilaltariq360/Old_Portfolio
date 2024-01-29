@@ -36,23 +36,33 @@ typewriterEffect(); // Start the typewriting animation
 
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
-let mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+let mobileMenuIconBar = document.querySelector(".mobile-menu-icon");
 let nav = document.querySelector("header nav");
 let header = document.querySelector("header");
 let menuToogle = false;
 
-mobileMenuIcon.addEventListener("click", () => {
+mobileMenuIconBar.addEventListener("click", () => {
   nav.classList.toggle("show");
   if (!menuToogle) {
     menuToogle = !menuToogle;
-    mobileMenuIcon.innerHTML = "&#x2716;";
+    mobileMenuIconBar.innerHTML = '<i class="fa-solid fa-xmark"></i>';
   } else {
     menuToogle = !menuToogle;
-    mobileMenuIcon.innerHTML = "&#9776;";
+    mobileMenuIconBar.innerHTML = '<i class="fa-solid fa-bars"></i>';
   }
 });
-
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.toggle("show");
+    if (!menuToogle) {
+      menuToogle = !menuToogle;
+      mobileMenuIconBar.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    } else {
+      menuToogle = !menuToogle;
+      mobileMenuIconBar.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }
+  });
+});
 window.addEventListener("scroll", function () {
-  const header = document.querySelector("header");
   header.classList.toggle("scroll", window.scrollY > 0);
 });
