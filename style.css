@@ -228,40 +228,28 @@ article img {
 }
 
 .article-body {
-  padding: 24px;
+  padding: 0px 24px 24px 24px;
 }
 
 article a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #426edc;
-}
-
-article a:focus {
-  outline: 1px dotted #426edc;
-}
-
-article a .icon {
-  min-width: 24px;
-  width: 24px;
-  height: 24px;
-  margin-left: 5px;
-  transform: translateX(var(--link-icon-translate));
-  opacity: var(--link-icon-opacity);
-  transition: all 0.3s;
+  color: #080808;
 }
 
 /* using the has() relational pseudo selector to update our custom properties */
 article:has(:hover, :focus) {
-  --img-scale: 1.2;
+  --img-scale: 1.1;
   --title-color: #426edc;
   --link-icon-translate: 0;
   --link-icon-opacity: 1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
-
+.article-body:has(:hover, :focus) i {
+  color: #426edc;
+}
 .header {
   padding-top: 8rem;
   padding-bottom: 5rem;
@@ -287,6 +275,12 @@ article:has(:hover, :focus) {
   .article-body p {
     display: none;
   }
+  .article-body {
+    height: 5.5rem;
+  }
+  .article-body h2 {
+    padding-top: 25px;
+  }
 }
 
 @container card (min-width: 380px) {
@@ -297,6 +291,10 @@ article:has(:hover, :focus) {
   }
   .article-body {
     padding-left: 0;
+    height: 5.5rem;
+  }
+  .article-body h2 {
+    padding-top: 30px;
   }
   figure {
     width: 100%;
@@ -321,7 +319,9 @@ article:has(:hover, :focus) {
 }
 .RadialProgress-1,
 .RadialProgress-2,
-.RadialProgress-3 {
+.RadialProgress-3,
+.RadialProgress-4,
+.RadialProgress-5 {
   --hue: 220;
   --holesize: 67%;
   --track-bg: hsl(233 34% 92%);
@@ -398,6 +398,54 @@ article:has(:hover, :focus) {
       #426edc,
       #426edc,
       var(--track-bg) var(--progress, 90%) 100%
+    );
+
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      black calc(var(--holesize) + 0.5px)
+    );
+  }
+}
+
+.RadialProgress-4 {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(
+      #426edc,
+      #426edc,
+      #426edc,
+      var(--track-bg) var(--progress, 95%) 100%
+    );
+
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      black calc(var(--holesize) + 0.5px)
+    );
+  }
+}
+
+.RadialProgress-5 {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(
+      #426edc,
+      #426edc,
+      #426edc,
+      var(--track-bg) var(--progress, 100%) 100%
     );
 
     mask-image: radial-gradient(
@@ -546,7 +594,9 @@ article:has(:hover, :focus) {
   }
   .RadialProgress-1,
   .RadialProgress-2,
-  .RadialProgress-3 {
+  .RadialProgress-3,
+  .RadialProgress-4,
+  .RadialProgress-5 {
     block-size: 10vmin;
     inline-size: 10vmin;
     font-size: max(3vmin, 1rem);
@@ -561,9 +611,17 @@ article:has(:hover, :focus) {
     font-size: 0.8rem;
   }
   #portfolio p {
+    font-size: 0.93rem;
+  }
+  .contact-btn {
+    font-size: 0.8rem;
+    width: 8rem;
+    height: 2.5rem;
+  }
+  .contact-btn i {
     font-size: 0.8rem;
   }
   .copyright-text {
-    font-size: 0.8rem;
+    font-size: 0.55rem;
   }
 }
