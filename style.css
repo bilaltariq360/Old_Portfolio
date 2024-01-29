@@ -60,7 +60,7 @@ nav a:hover {
   width: 13rem;
   position: fixed;
   right: -160px;
-  z-index: 1000;
+  z-index: 90;
   font-size: 0.8rem;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
@@ -170,7 +170,7 @@ nav.show {
   left: 0;
   width: 100%;
   background: transparent;
-  z-index: 99;
+  z-index: 100;
   background: #080808e8;
 }
 
