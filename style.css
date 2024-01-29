@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap");
 @font-face {
   font-family: Neon;
-  src: url(Neoneon.otf);
+  src: url(./assets/fonts/Neoneon.otf);
 }
 * {
   margin: 0;
@@ -53,8 +53,6 @@ nav a {
 nav a:hover {
   color: #fff;
 }
-
-/* Floating Social Media Bar Style Starts Here */
 
 .fl-fl {
   background: #426edc;
@@ -110,7 +108,7 @@ nav a:hover {
 .float-ig {
   top: 380px;
 }
-/* Floating Social Media Bar Style Ends Here */
+
 #home {
   min-height: 100vh;
   display: flex;
@@ -140,7 +138,6 @@ nav a:hover {
   position: absolute;
 }
 
-/* Mobile Menu Icon */
 nav {
   display: flex;
   justify-content: space-between;
@@ -183,13 +180,13 @@ nav.show a {
 }
 article {
   --img-scale: 1.001;
-  --title-color: black;
+  --title-color: #080808;
   --link-icon-translate: -20px;
   --link-icon-opacity: 0;
   position: relative;
   border-radius: 12px;
   box-shadow: none;
-  background: #fff;
+  background: #f0f2f5;
   color: #080808;
   transform-origin: center;
   transition: all 0.4s ease-in-out;
@@ -204,7 +201,6 @@ article a::after {
   content: "";
 }
 
-/* basic article elements styling */
 article h2 {
   margin: 0 0 18px 0;
   font-family: "Poppins", sans-serif;
@@ -238,7 +234,6 @@ article a {
   color: #080808;
 }
 
-/* using the has() relational pseudo selector to update our custom properties */
 article:has(:hover, :focus) {
   --img-scale: 1.1;
   --title-color: #426edc;
@@ -246,6 +241,13 @@ article:has(:hover, :focus) {
   --link-icon-opacity: 1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.article-body i {
+  font-size: 1.2rem;
+  padding-left: 5px;
+  font-weight: bolder;
+  transition: 0.4s;
+  color: #080808;
 }
 .article-body:has(:hover, :focus) i {
   color: #426edc;
@@ -530,7 +532,7 @@ article:has(:hover, :focus) {
 }
 .contact-btn:hover {
   background: #426edc;
-  font-size: 1.1rem;
+  font-size: 1.03rem;
 }
 .contact-btn i {
   color: #ffffff84;
