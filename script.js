@@ -95,7 +95,7 @@ function emailSend() {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Please enter valid message! At least than 10 characters.",
+      text: "Please enter a valid message! At least than 10 characters.",
       confirmButtonColor: "#426edc",
     });
     return;
@@ -112,7 +112,7 @@ function emailSend() {
     if (message === "OK") {
       Swal.fire({
         title: "Message Sent!",
-        text: "I will repond you in 24 hours!",
+        text: "I'll reply you within 24 hours!",
         icon: "success",
         confirmButtonColor: "#426edc",
       });
