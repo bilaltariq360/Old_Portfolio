@@ -66,3 +66,67 @@ navLinks.forEach((link) => {
 window.addEventListener("scroll", function () {
   header.classList.toggle("scroll", window.scrollY > 0);
 });
+sendCheck = false;
+function emailSend() {
+  let senderName = document.getElementById("name").value;
+  let senderEmail = document.getElementById("email").value;
+  let senderMobile = document.getElementById("mobile").value;
+  let sendermessage = document.getElementById("message").value;
+
+  let messageBody =
+    "Name: " +
+    senderName +
+    "<br/>Email: " +
+    senderEmail +
+    "<br/>Mobile: " +
+    senderMobile +
+    "<br/><br/>" +
+    sendermessage +
+    "<br/><br/><br/><br/>";
+  if (senderMobile.length < 11) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please enter correct mobile number!",
+      confirmButtonColor: "#426edc",
+    });
+    return;
+  } else if (sendermessage.length < 10) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please enter valid message! At least than 10 characters.",
+      confirmButtonColor: "#426edc",
+    });
+    return;
+  }
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "hafizbilaltariq360@gmail.com",
+    Password: "DA7FD3A8D24E8D37896164AA5A758F075C58",
+    To: "f219243@cfd.nu.edu.pk",
+    From: "hafizbilaltariq360@gmail.com",
+    Subject: senderName,
+    Body: messageBody,
+  }).then((message) => {
+    if (message === "OK") {
+      Swal.fire({
+        title: "Message Sent!",
+        text: "I will repond you in 24 hours!",
+        icon: "success",
+        confirmButtonColor: "#426edc",
+      });
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("mobile").value = "";
+      document.getElementById("message").value = "";
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+        confirmButtonColor: "#426edc",
+      });
+    }
+  });
+}

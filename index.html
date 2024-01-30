@@ -320,15 +320,27 @@
       </marquee>
     </section>
     <h1 class="header" id="contact"><span class="arrow">>></span> Contact</h1>
-    <section id="contact-sec">
+    <!-- <section id="contact-sec">
       <a href="mailto:hafizbilaltariq360@gmail.com" target="_blank"
         ><div class="contact-btn">
           <p>Send mail</p>
           <i class="fa fa-arrow-right"></i></div
       ></a>
-    </section>
+    </section> -->
+    <div class="container flex">
+      <div class="facebook-page flex">
+        <form action="#" onsubmit="emailSend(); return false;">
+          <input type="text" id="name" placeholder="Full Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="tel" id="mobile" placeholder="Phone" required />
+          <textarea placeholder="Message" id="message" required></textarea>
+          <div class="link">
+            <button type="submit" class="login">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="footer-hr"><hr /></div>
-
     <footer class="footer">
       <div class="copright">
         <p class="copyright-text">
@@ -337,6 +349,8 @@
         </p>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
