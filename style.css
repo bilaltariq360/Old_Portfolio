@@ -4,6 +4,13 @@
   font-family: Neon;
   src: url(./assets/fonts/Neoneon.otf);
 }
+:root {
+  --primary-color: #080808;
+  --secondary-color: #ffffff84;
+  --supportive-color: #426edc;
+  --hover-color: #b8ccff;
+  --pureWhite-color: #ffffff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +20,8 @@
 }
 
 body {
-  background: #080808;
-  color: #ffffff84;
+  background: var(--primary-color);
+  color: var(--secondary-color);
   user-select: none;
 }
 
@@ -32,11 +39,11 @@ header {
   transition: background-color 0.3s ease;
 }
 header.scroll {
-  background: #080808;
+  background: var(--primary-color);
 }
 .logo {
   font-size: 25px;
-  color: #fff;
+  color: var(--pureWhite-color);
   text-decoration: none;
   font-weight: 600;
   padding-bottom: 5px;
@@ -44,18 +51,27 @@ header.scroll {
 
 nav a {
   font-size: 18px;
-  color: #b8ccff;
+  color: var(--hover-color);
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
 }
 
 nav a:hover {
-  color: #fff;
+  color: var(--pureWhite-color);
+}
+
+.theme-icon {
+  color: var(--pureWhite-color);
+  font-size: 1.3rem;
+  width: 100%;
+  text-align: end;
+  margin-right: 40px;
+  cursor: pointer;
 }
 
 .fl-fl {
-  background: #426edc;
+  background: var(--supportive-color);
   padding: 4px;
   width: 13rem;
   position: fixed;
@@ -71,7 +87,7 @@ nav a:hover {
 
 .sm-fa {
   font-size: 1.2rem;
-  color: #fff;
+  color: var(--pureWhite-color);
   padding: 10px 0;
   width: 40px;
   margin-left: 8px;
@@ -82,7 +98,7 @@ nav a:hover {
 }
 
 .fl-fl a {
-  color: #fff !important;
+  color: var(--pureWhite-color) !important;
   text-decoration: none;
   text-align: center;
   line-height: 43px !important;
@@ -115,16 +131,24 @@ nav a:hover {
   justify-content: center;
   padding-top: 8rem;
   font-size: 10rem;
-  color: #ffffffd5;
+  color: var(--pureWhite-color) fffd5;
   font-family: Neon;
-  background: linear-gradient(to right, #080808 50%, #426edc 50%);
+  background: linear-gradient(
+    to right,
+    var(--primary-color) 50%,
+    var(--supportive-color) 50%
+  );
+}
+
+#home img {
+  z-index: 2;
 }
 
 #home h2 {
   font-size: 7rem;
   letter-spacing: 2rem;
   font-weight: 100;
-  color: #ffffff84;
+  color: var(--secondary-color);
   font-family: Neon;
   position: absolute;
   z-index: 1;
@@ -132,7 +156,7 @@ nav a:hover {
 
 #home p {
   font-size: 3rem;
-  color: #ffffff84;
+  color: var(--secondary-color);
   font-weight: 100;
   padding-top: 21rem;
   position: absolute;
@@ -154,7 +178,7 @@ nav {
 .mobile-menu-icon {
   display: block;
   font-size: 24px;
-  color: #fff;
+  color: var(--pureWhite-color);
   cursor: pointer;
 }
 
@@ -180,14 +204,14 @@ nav.show a {
 }
 article {
   --img-scale: 1.001;
-  --title-color: #080808;
+  --title-color: var(--primary-color);
   --link-icon-translate: -20px;
   --link-icon-opacity: 0;
   position: relative;
   border-radius: 12px;
   box-shadow: none;
   background: #f0f2f5;
-  color: #080808;
+  color: var(--primary-color);
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -231,12 +255,12 @@ article a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #080808;
+  color: var(--primary-color);
 }
 
 article:has(:hover, :focus) {
   --img-scale: 1.1;
-  --title-color: #426edc;
+  --title-color: var(--supportive-color);
   --link-icon-translate: 0;
   --link-icon-opacity: 1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
@@ -247,10 +271,10 @@ article:has(:hover, :focus) {
   padding-left: 5px;
   font-weight: bolder;
   transition: 0.4s;
-  color: #080808;
+  color: var(--primary-color);
 }
 .article-body:has(:hover, :focus) i {
-  color: #426edc;
+  color: var(--supportive-color);
 }
 .header {
   padding-top: 8rem;
@@ -259,7 +283,7 @@ article:has(:hover, :focus) {
   font-size: 4rem;
 }
 .header .arrow {
-  color: #426edc;
+  color: var(--supportive-color);
 }
 .articles {
   display: grid;
@@ -348,9 +372,9 @@ article:has(:hover, :focus) {
     border-radius: 50%;
     z-index: -1;
     background: conic-gradient(
-      #426edc,
-      #426edc,
-      #426edc,
+      var(--supportive-color),
+      var(--supportive-color),
+      var(--supportive-color),
       var(--track-bg) var(--progress, 85%) 100%
     );
 
@@ -372,9 +396,9 @@ article:has(:hover, :focus) {
     border-radius: 50%;
     z-index: -1;
     background: conic-gradient(
-      #426edc,
-      #426edc,
-      #426edc,
+      var(--supportive-color),
+      var(--supportive-color),
+      var(--supportive-color),
       var(--track-bg) var(--progress, 70%) 100%
     );
 
@@ -396,9 +420,9 @@ article:has(:hover, :focus) {
     border-radius: 50%;
     z-index: -1;
     background: conic-gradient(
-      #426edc,
-      #426edc,
-      #426edc,
+      var(--supportive-color),
+      var(--supportive-color),
+      var(--supportive-color),
       var(--track-bg) var(--progress, 90%) 100%
     );
 
@@ -420,9 +444,9 @@ article:has(:hover, :focus) {
     border-radius: 50%;
     z-index: -1;
     background: conic-gradient(
-      #426edc,
-      #426edc,
-      #426edc,
+      var(--supportive-color),
+      var(--supportive-color),
+      var(--supportive-color),
       var(--track-bg) var(--progress, 95%) 100%
     );
 
@@ -444,9 +468,9 @@ article:has(:hover, :focus) {
     border-radius: 50%;
     z-index: -1;
     background: conic-gradient(
-      #426edc,
-      #426edc,
-      #426edc,
+      var(--supportive-color),
+      var(--supportive-color),
+      var(--supportive-color),
       var(--track-bg) var(--progress, 100%) 100%
     );
 
@@ -510,34 +534,7 @@ article:has(:hover, :focus) {
 #portfolio .sp {
   padding-left: 30px;
 }
-#contact-sec {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#contact-sec a {
-  text-decoration: none;
-}
-.contact-btn {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border: #426edc 2px solid;
-  color: #ffffff84;
-  width: 12rem;
-  height: 3rem;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-.contact-btn:hover {
-  background: #426edc;
-  font-size: 1.03rem;
-}
-.contact-btn i {
-  color: #ffffff84;
-  font-size: 1rem;
-}
+
 .footer-hr {
   width: 80%;
   margin: 0 auto;
@@ -550,7 +547,7 @@ article:has(:hover, :focus) {
   border: none;
   border-radius: 50px;
   height: 0.1rem;
-  background-color: #ffffff84;
+  background-color: var(--secondary-color);
 }
 
 .footer {
@@ -570,7 +567,7 @@ article:has(:hover, :focus) {
 }
 
 .braindev {
-  color: #426edc;
+  color: var(--supportive-color);
 }
 
 @media screen and (max-width: 600px) {
@@ -672,7 +669,7 @@ form textarea {
 form input:focus,
 form textarea:focus {
   outline: none;
-  border-color: #426edc;
+  border-color: var(--supportive-color);
 }
 ::placeholder {
   color: #777;
@@ -688,16 +685,16 @@ form textarea:focus {
   border: none;
   outline: none;
   cursor: pointer;
-  background: #426edc;
+  background: var(--supportive-color);
   padding: 15px 0;
   border-radius: 6px;
-  color: #fff;
+  color: var(--pureWhite-color);
   font-size: 1.25rem;
   font-weight: 600;
   transition: 0.2s ease;
 }
 .link .login:hover {
-  background: #426edc;
+  background: var(--supportive-color);
 }
 .link .forgot:hover {
   text-decoration: underline;
