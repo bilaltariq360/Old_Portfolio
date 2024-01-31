@@ -60,11 +60,12 @@ nav a {
 nav a:hover {
   color: var(--pureWhite-color);
 }
-
+.menu-icons {
+  display: flex;
+}
 .theme-icon {
   color: var(--pureWhite-color);
   font-size: 1.3rem;
-  width: 100%;
   text-align: end;
   margin-right: 40px;
   cursor: pointer;
