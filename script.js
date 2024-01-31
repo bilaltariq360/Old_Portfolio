@@ -1,7 +1,6 @@
 document.addEventListener("contextmenu", () => {
   event.preventDefault();
 });
-
 const words = ["Flutter", "MERN Stack", ".NET FRAMEWORK", "UI Designer"];
 let currentWordIndex = 0;
 let currentCharIndex = 0;

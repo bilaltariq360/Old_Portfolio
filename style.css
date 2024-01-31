@@ -57,7 +57,7 @@ nav a {
   margin-left: 35px;
 }
 .resume a {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--pureWhite-color);
   text-decoration: none;
   font-weight: 500;
@@ -69,6 +69,8 @@ nav a:hover {
 }
 .menu-icons {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .theme-icon {
   color: var(--pureWhite-color);
@@ -577,12 +579,16 @@ article:has(:hover, :focus) {
   .logo {
     font-size: 20px;
   }
+  .theme-icon{
 
-  nav a {
-    font-size: 13px;
   }
-  .resume a {
-    font-size: 13px;
+  .menu-icons i {
+    font-size: 18px;
+  }
+  .resume a,
+  .resume i {
+    margin-right: 25px;
+    font-size: 18px;
   }
   #home img {
     padding-top: 220px;
