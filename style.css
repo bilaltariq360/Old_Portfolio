@@ -39,7 +39,7 @@ header {
   transition: background-color 0.3s ease;
 }
 header.scroll {
-  background: var(--primary-color);
+  background: var(--supportive-color);
 }
 .logo {
   font-size: 25px;
@@ -55,6 +55,13 @@ nav a {
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
+}
+.resume a {
+  font-size: 18px;
+  color: var(--pureWhite-color);
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 30px;
 }
 
 nav a:hover {
@@ -264,8 +271,8 @@ article:has(:hover, :focus) {
   --title-color: var(--supportive-color);
   --link-icon-translate: 0;
   --link-icon-opacity: 1;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
 }
 .article-body i {
   font-size: 1.2rem;
@@ -510,14 +517,6 @@ article:has(:hover, :focus) {
   text-align: center;
 }
 
-.blockquote:before {
-  position: absolute;
-  top: 0;
-  content: "\f10d";
-  font-size: 200px;
-  color: rgba(0, 0, 0, 0.1);
-}
-
 .blockquote::after {
   content: "";
   top: 20px;
@@ -574,6 +573,16 @@ article:has(:hover, :focus) {
 @media screen and (max-width: 600px) {
   header {
     padding: 30px 22px 12px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+  .resume a {
+    font-size: 13px;
   }
   #home img {
     padding-top: 220px;

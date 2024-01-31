@@ -1,6 +1,7 @@
 document.addEventListener("contextmenu", () => {
   event.preventDefault();
 });
+
 const words = ["Flutter", "MERN Stack", ".NET FRAMEWORK", "UI Designer"];
 let currentWordIndex = 0;
 let currentCharIndex = 0;
@@ -69,6 +70,10 @@ navLinks.forEach((link) => {
 });
 window.addEventListener("scroll", function () {
   header.classList.toggle("scroll", window.scrollY > 0);
+  document.querySelector("header a").style.color = "#ffffff";
+  if (window.scrollY <= 0 && themeIcon.classList.contains("fa-moon")) {
+    document.querySelector("header a").style.color = "#383838";
+  }
 });
 
 function themeMode() {
@@ -78,10 +83,11 @@ function themeMode() {
     themeIcon.classList.remove("fa-sun");
     themeIcon.classList.add("fa-solid");
     themeIcon.classList.add("fa-moon");
-    root.style.setProperty("--primary-color", "#D9C9FF");
-    root.style.setProperty("--supportive-color", "#6B6CAE");
+    root.style.setProperty("--primary-color", "#fff");
     root.style.setProperty("--secondary-color", "#383838");
-    root.style.setProperty("--hover-color", "#D9C9FF");
+    if (window.scrollY > 0)
+      document.querySelector("header a").style.color = "#ffffff";
+    else document.querySelector("header a").style.color = "#383838";
     let articleBodyH2 = document.querySelectorAll("article h2");
     articleBodyH2.forEach((articleBody) => {
       articleBody.style.color = "#383838";
@@ -100,9 +106,8 @@ function themeMode() {
     themeIcon.classList.add("fa-regular");
     themeIcon.classList.add("fa-sun");
     root.style.setProperty("--primary-color", "#080808");
-    root.style.setProperty("--supportive-color", "#426edc");
     root.style.setProperty("--secondary-color", "#ffffff84");
-    root.style.setProperty("--hover-color", "#b8ccff");
+    document.querySelector("header a").style.color = "#ffffff";
   }
 }
 
