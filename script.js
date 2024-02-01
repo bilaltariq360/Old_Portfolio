@@ -115,17 +115,9 @@ function themeMode() {
     themeIcon.classList.add("fa-sun");
     root.style.setProperty("--primary-color", "#080808");
     root.style.setProperty("--secondary-color", "#ffffff84");
-    root.style.setProperty("--card-color", "#121212");
-    root.style.setProperty("--cardFront-color", "#1f1f1f");
+    root.style.setProperty("--card-color", "#212121");
+    root.style.setProperty("--cardFront-color", "#2c2c2c");
     root.style.setProperty("--cardFont-color", "#cfcfcf");
-
-    // document.querySelector("header a").style.color = "#ffffff";
-    // let articleBodyH2 = document.querySelector("article");
-    // articleBodyH2.style.color = "#cfcfcf";
-    // let articleBody = document.querySelectorAll("article");
-    // articleBody.forEach((articleBody) => {
-    //   articleBody.style.background = "#f3f3f3";
-    //});
   }
 }
 

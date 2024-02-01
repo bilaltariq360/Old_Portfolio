@@ -10,10 +10,9 @@
   --supportive-color: #426edc;
   --hover-color: #b8ccff;
   --pureWhite-color: #ffffff;
-  --card-color: #121212;
-  --cardFront-color: #1f1f1f;
+  --card-color: #212121;
+  --cardFront-color: #2c2c2c;
   --cardFont-color: #cfcfcf;
-  --input-color: ;
 }
 * {
   margin: 0;
@@ -42,6 +41,7 @@ header {
   z-index: 100;
   transition: background-color 0.3s ease;
 }
+
 header.scroll {
   background: var(--supportive-color);
 }
@@ -175,15 +175,10 @@ nav a:hover {
   position: absolute;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .mobile-menu-icon {
   display: none;
 }
+
 nav {
   display: none;
 }
@@ -281,7 +276,7 @@ article:has(:hover, :focus) {
 .article-body i {
   font-size: 1.2rem;
   padding-left: 5px;
-  color: var(--cardFont-color);;
+  color: var(--cardFont-color);
   font-weight: bolder;
   transition: 0.4s;
 }
