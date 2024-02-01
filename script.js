@@ -113,6 +113,7 @@ function themeMode() {
     themeIcon.classList.remove("fa-moon");
     themeIcon.classList.add("fa-regular");
     themeIcon.classList.add("fa-sun");
+    document.querySelector("header a").style.color = "#ffffff";
     root.style.setProperty("--primary-color", "#080808");
     root.style.setProperty("--secondary-color", "#ffffff84");
     root.style.setProperty("--card-color", "#212121");
