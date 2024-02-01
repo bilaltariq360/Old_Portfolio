@@ -83,11 +83,11 @@ nav a:hover {
 .fl-fl {
   background: var(--supportive-color);
   padding: 4px;
-  width: 13rem;
+  width: 12.7rem;
   position: fixed;
   right: -160px;
   z-index: 90;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
@@ -104,13 +104,12 @@ nav a:hover {
 }
 
 .fl-fl:hover {
-  right: 0;
+  right: -25px;
 }
 
-.fl-fl a {
+.float-sm a {
   color: var(--pureWhite-color) !important;
   text-decoration: none;
-  text-align: center;
   line-height: 43px !important;
   vertical-align: top !important;
 }
