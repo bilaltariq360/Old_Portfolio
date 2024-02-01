@@ -104,18 +104,10 @@ function themeMode() {
     if (window.scrollY > 0)
       document.querySelector("header a").style.color = "#ffffff";
     else document.querySelector("header a").style.color = "#383838";
-    let articleBodyH2 = document.querySelectorAll("article h2");
-    articleBodyH2.forEach((articleBody) => {
-      articleBody.style.color = "#383838";
-    });
-    let articleBodyI = document.querySelectorAll("article i");
-    articleBodyI.forEach((articleBody) => {
-      articleBody.style.color = "#383838";
-    });
-    let articleBodyP = document.querySelectorAll("article p");
-    articleBodyP.forEach((articleBody) => {
-      articleBody.style.color = "#383838";
-    });
+
+    root.style.setProperty("--card-color", "#f3f3f3");
+    root.style.setProperty("--cardFront-color", "#ffffff");
+    root.style.setProperty("--cardFont-color", "#383838");
   } else {
     themeIcon.classList.remove("fa-solid");
     themeIcon.classList.remove("fa-moon");
@@ -123,7 +115,17 @@ function themeMode() {
     themeIcon.classList.add("fa-sun");
     root.style.setProperty("--primary-color", "#080808");
     root.style.setProperty("--secondary-color", "#ffffff84");
-    document.querySelector("header a").style.color = "#ffffff";
+    root.style.setProperty("--card-color", "#121212");
+    root.style.setProperty("--cardFront-color", "#1f1f1f");
+    root.style.setProperty("--cardFont-color", "#cfcfcf");
+
+    // document.querySelector("header a").style.color = "#ffffff";
+    // let articleBodyH2 = document.querySelector("article");
+    // articleBodyH2.style.color = "#cfcfcf";
+    // let articleBody = document.querySelectorAll("article");
+    // articleBody.forEach((articleBody) => {
+    //   articleBody.style.background = "#f3f3f3";
+    //});
   }
 }
 
@@ -133,16 +135,7 @@ function emailSend() {
   let senderMobile = document.getElementById("mobile").value;
   let sendermessage = document.getElementById("message").value;
 
-  let messageBody =
-    "Name: " +
-    senderName +
-    "<br/>Email: " +
-    senderEmail +
-    "<br/>Mobile: " +
-    senderMobile +
-    "<br/><br/>" +
-    sendermessage +
-    "<br/><br/><br/><br/>";
+  let messageBody = `<b><span style = "color:red">Name: </span></b>${senderName}</p><br/><b><span style = "color:red">Email: </span></b>${senderEmail}<br/><b><span style = "color:red">Mobile: </span></b>${senderMobile}<br/><br/>${sendermessage}<br/><br/><br/><br/>`;
   if (senderMobile.length < 11) {
     Swal.fire({
       icon: "error",

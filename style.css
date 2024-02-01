@@ -10,6 +10,10 @@
   --supportive-color: #426edc;
   --hover-color: #b8ccff;
   --pureWhite-color: #ffffff;
+  --card-color: #121212;
+  --cardFront-color: #1f1f1f;
+  --cardFont-color: #cfcfcf;
+  --input-color: ;
 }
 * {
   margin: 0;
@@ -219,8 +223,8 @@ article {
   position: relative;
   border-radius: 12px;
   box-shadow: none;
-  background: #f0f2f5;
-  color: var(--primary-color);
+  background: var(--card-color);
+  color: var(--cardFont-color);
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -238,7 +242,6 @@ article h2 {
   margin: 0 0 18px 0;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
-  color: var(--title-color);
   transition: color 0.3s ease-out;
 }
 
@@ -263,8 +266,8 @@ article img {
 article a {
   display: inline-flex;
   align-items: center;
+  color: var(--secondary-color);
   text-decoration: none;
-  color: var(--primary-color);
 }
 
 article:has(:hover, :focus) {
@@ -278,12 +281,9 @@ article:has(:hover, :focus) {
 .article-body i {
   font-size: 1.2rem;
   padding-left: 5px;
+  color: var(--cardFont-color);;
   font-weight: bolder;
   transition: 0.4s;
-  color: var(--primary-color);
-}
-.article-body:has(:hover, :focus) i {
-  color: var(--supportive-color);
 }
 .header {
   padding-top: 8rem;
@@ -655,29 +655,32 @@ article:has(:hover, :focus) {
 form {
   display: flex;
   flex-direction: column;
-  background: #f0f2f5;
+  background: var(--card-color);
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   width: 100%;
 }
 form input {
   height: 55px;
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid transparent;
+  background: var(--cardFront-color);
   border-radius: 6px;
   margin-bottom: 15px;
   font-size: 1rem;
+  color: var(--cardFont-color);
   padding: 0 14px;
 }
 form textarea {
   height: 150px;
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid var(--card-color);
+  background: var(--cardFront-color);
   border-radius: 6px;
   margin-bottom: 15px;
   font-size: 1rem;
+  color: var(--cardFont-color);
   padding: 10px 14px;
   resize: none;
 }
