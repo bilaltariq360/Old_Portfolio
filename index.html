@@ -20,6 +20,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body oncontextmenu="return false">
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <header>
       <a href="#" class="logo">Portfolio</a>
       <nav>
@@ -298,7 +308,6 @@
           aria-valuemin="0"
           aria-valuemax="100"
         >
-          
           <img src="./assets/images/ai.png" width="45%" height="45%" />
         </div>
         <p>UI Designs</p>
@@ -311,7 +320,6 @@
           aria-valuemin="0"
           aria-valuemax="100"
         >
-          
           <img src="./assets/images/git.png" width="50%" height="50%" />
         </div>
         <p>Git</p>
@@ -362,5 +370,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector(".lds-roller").style.display = "none";
+      });
+    </script>
   </body>
 </html>
