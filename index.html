@@ -29,6 +29,7 @@
       <div></div>
       <div></div>
       <div></div>
+      Loading
     </div>
     <header>
       <a href="#" class="logo">Portfolio</a>
@@ -374,6 +375,7 @@
       document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           document.querySelector(".lds-roller").style.display = "none";
+          document.querySelector("body").style.overflowY = "scroll";
         }, 3000);
       });
     </script>

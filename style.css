@@ -26,6 +26,7 @@ body {
   background: var(--primary-color);
   color: var(--secondary-color);
   user-select: none;
+  overflow-y: hidden;
 }
 .lds-roller {
   display: flex;
@@ -36,6 +37,10 @@ body {
   background: var(--primary-color);
   z-index: 1000;
   position: fixed;
+  color: var(--primary-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
@@ -181,6 +186,7 @@ nav a:hover {
 }
 
 .fl-fl {
+  display: none;
   background: var(--supportive-color);
   padding: 4px;
   width: 12.7rem;
