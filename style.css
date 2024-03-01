@@ -62,7 +62,7 @@ body {
 .lds-roller div:nth-child(1):after {
   top: 63px;
   left: 63px;
-  background: #008342;
+  background: #fff;
 }
 .lds-roller div:nth-child(2) {
   animation-delay: -0.072s;
@@ -70,7 +70,7 @@ body {
 .lds-roller div:nth-child(2):after {
   top: 68px;
   left: 56px;
-  background: #008342;
+  background: #fff;
 }
 .lds-roller div:nth-child(3) {
   animation-delay: -0.108s;
@@ -78,7 +78,7 @@ body {
 .lds-roller div:nth-child(3):after {
   top: 71px;
   left: 48px;
-  background: #0054e0;
+  background: #fff;
 }
 .lds-roller div:nth-child(4) {
   animation-delay: -0.144s;
@@ -86,7 +86,7 @@ body {
 .lds-roller div:nth-child(4):after {
   top: 72px;
   left: 40px;
-  background: #0054e0;
+  background: #fff;
 }
 .lds-roller div:nth-child(5) {
   animation-delay: -0.18s;
@@ -94,7 +94,7 @@ body {
 .lds-roller div:nth-child(5):after {
   top: 71px;
   left: 32px;
-  background: #cf2c1f;
+  background: #fff;
 }
 .lds-roller div:nth-child(6) {
   animation-delay: -0.216s;
@@ -102,7 +102,7 @@ body {
 .lds-roller div:nth-child(6):after {
   top: 68px;
   left: 24px;
-  background: #cf2c1f;
+  background: #fff;
 }
 .lds-roller div:nth-child(7) {
   animation-delay: -0.252s;
@@ -110,7 +110,7 @@ body {
 .lds-roller div:nth-child(7):after {
   top: 63px;
   left: 17px;
-  background: #f7a200;
+  background: #fff;
 }
 .lds-roller div:nth-child(8) {
   animation-delay: -0.288s;
@@ -118,7 +118,7 @@ body {
 .lds-roller div:nth-child(8):after {
   top: 56px;
   left: 12px;
-  background: #f7a200;
+  background: #fff;
 }
 @keyframes lds-roller {
   0% {
@@ -161,12 +161,14 @@ nav a {
   font-weight: 500;
   margin-left: 35px;
 }
+.resume {
+  margin-right: 30px;
+}
 .resume a {
   font-size: 20px;
   color: var(--pureWhite-color);
   text-decoration: none;
   font-weight: 500;
-  margin-right: 30px;
 }
 
 nav a:hover {
@@ -177,6 +179,16 @@ nav a:hover {
   justify-content: center;
   align-items: center;
 }
+.menu-icons .resume,
+.menu-icons .theme-icon,
+.menu-icons .mobile-menu-icon {
+  transition: 0.3s;
+}
+.menu-icons .resume:hover,
+.menu-icons .theme-icon:hover,
+.menu-icons .mobile-menu-icon:hover {
+  transform: scale(1.2);
+}
 .theme-icon {
   color: var(--pureWhite-color);
   font-size: 1.3rem;
@@ -186,7 +198,6 @@ nav a:hover {
 }
 
 .fl-fl {
-  display: none;
   background: var(--supportive-color);
   padding: 4px;
   width: 12.7rem;
@@ -273,7 +284,7 @@ nav a:hover {
   font-size: 3rem;
   color: var(--secondary-color);
   font-weight: 100;
-  padding-top: 21rem;
+  padding-top: 24rem;
   position: absolute;
 }
 
