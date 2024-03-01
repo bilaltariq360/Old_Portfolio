@@ -161,14 +161,12 @@ nav a {
   font-weight: 500;
   margin-left: 35px;
 }
-.resume {
-  margin-right: 30px;
-}
 .resume a {
   font-size: 20px;
   color: var(--pureWhite-color);
   text-decoration: none;
   font-weight: 500;
+  margin-right: 30px;
 }
 
 nav a:hover {
@@ -178,16 +176,6 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.menu-icons .resume,
-.menu-icons .theme-icon,
-.menu-icons .mobile-menu-icon {
-  transition: 0.3s;
-}
-.menu-icons .resume:hover,
-.menu-icons .theme-icon:hover,
-.menu-icons .mobile-menu-icon:hover {
-  transform: scale(1.2);
 }
 .theme-icon {
   color: var(--pureWhite-color);
@@ -284,7 +272,7 @@ nav a:hover {
   font-size: 3rem;
   color: var(--secondary-color);
   font-weight: 100;
-  padding-top: 24rem;
+  padding-top: 22rem;
   position: absolute;
 }
 
@@ -302,7 +290,9 @@ nav {
   color: var(--pureWhite-color);
   cursor: pointer;
 }
-
+.show {
+  height: 100vh;
+}
 header {
   padding: 30px 60px 12px;
 }
