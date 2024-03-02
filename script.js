@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function nextSlide() {
     carousel.next();
   }
-  setInterval(nextSlide, 30000);
+  setInterval(nextSlide, 3000);
 });
 document.addEventListener("contextmenu", () => {
   event.preventDefault();
