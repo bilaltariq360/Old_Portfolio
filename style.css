@@ -21,7 +21,9 @@
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
-
+h1 {
+  font-weight: bold;
+}
 body {
   background: var(--primary-color);
   color: var(--secondary-color);
@@ -722,7 +724,8 @@ article:has(:hover, :focus) {
   .article-body a {
     font-size: 0.8rem;
   }
-  #portfolio p {
+  #portfolio p,
+  #comment-sec p {
     font-size: 0.93rem;
   }
   .contact-btn {
@@ -814,4 +817,73 @@ form textarea:focus {
 }
 .link .forgot:hover {
   text-decoration: underline;
+}
+
+.carousel {
+  margin: 80px 15rem 0px 15rem;
+}
+.carousel-item-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 100px 80px 100px;
+  background: var(--card-color);
+  color: var(--cardFont-color);
+  border-radius: 5px;
+}
+
+.comments em {
+  color: var(--supportive-color);
+}
+
+.carousel-item-content img {
+  width: 15%;
+  border-radius: 500px;
+  margin-right: 50px;
+}
+
+.carousel-item-content h1 {
+  color: var(--supportive-color);
+}
+
+@media screen and (max-width: 1200px) {
+  .carousel {
+    margin: 80px 8rem 0px 8rem;
+  }
+  .carousel-item-content {
+    display: block;
+    text-align: center;
+    min-height: 35rem;
+    max-height: 35rem;
+  }
+  .carousel-item-content img {
+    width: 15%;
+    border-radius: 500px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .carousel-item-content img {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .carousel-item-content img {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .carousel {
+    margin: 80px 1.5rem 0px 1.5rem;
+  }
+  .carousel-item-content img {
+    width: 40%;
+  }
+  .carousel-item-content {
+    padding: 60px 30px 60px 30px;
+  }
 }

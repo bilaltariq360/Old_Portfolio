@@ -1,23 +1,23 @@
-document.addEventListener("contextmenu", () => {
-  event.preventDefault();
-});
-document.onkeydown = (e) => {
-  if (e.key == 123) {
-    e.preventDefault();
-  }
-  if (e.ctrlKey && e.shiftKey && e.key == "I") {
-    e.preventDefault();
-  }
-  if (e.ctrlKey && e.shiftKey && e.key == "C") {
-    e.preventDefault();
-  }
-  if (e.ctrlKey && e.shiftKey && e.key == "J") {
-    e.preventDefault();
-  }
-  if (e.ctrlKey && e.key == "I") {
-    e.preventDefault();
-  }
-};
+// document.addEventListener("contextmenu", () => {
+//   event.preventDefault();
+// });
+// document.onkeydown = (e) => {
+//   if (e.key == 123) {
+//     e.preventDefault();
+//   }
+//   if (e.ctrlKey && e.shiftKey && e.key == "I") {
+//     e.preventDefault();
+//   }
+//   if (e.ctrlKey && e.shiftKey && e.key == "C") {
+//     e.preventDefault();
+//   }
+//   if (e.ctrlKey && e.shiftKey && e.key == "J") {
+//     e.preventDefault();
+//   }
+//   if (e.ctrlKey && e.key == "I") {
+//     e.preventDefault();
+//   }
+// };
 const words = ["Flutter", "MERN Stack", ".NET FRAMEWORK", "UI Designer"];
 let currentWordIndex = 0;
 let currentCharIndex = 0;
@@ -60,6 +60,7 @@ let mobileMenuIconBar = document.querySelector(".mobile-menu-icon");
 let themeIcon = document.getElementById("theme-mode");
 let nav = document.querySelector("header nav");
 let header = document.querySelector("header");
+let carousel = document.querySelector("#carouselExampleDark");
 let menuToogle = false;
 
 mobileMenuIconBar.addEventListener("click", () => {
@@ -105,9 +106,11 @@ function themeMode() {
       document.querySelector("header a").style.color = "#ffffff";
     else document.querySelector("header a").style.color = "#383838";
 
-    root.style.setProperty("--card-color", "#f3f3f3");
+    root.style.setProperty("--card-color", "#e6e6e6");
     root.style.setProperty("--cardFront-color", "#ffffff");
     root.style.setProperty("--cardFont-color", "#383838");
+
+    carousel.classList.add("carousel-dark");
   } else {
     themeIcon.classList.remove("fa-solid");
     themeIcon.classList.remove("fa-moon");
@@ -119,6 +122,8 @@ function themeMode() {
     root.style.setProperty("--card-color", "#212121");
     root.style.setProperty("--cardFront-color", "#2c2c2c");
     root.style.setProperty("--cardFont-color", "#cfcfcf");
+
+    carousel.classList.remove("carousel-dark");
   }
 }
 
