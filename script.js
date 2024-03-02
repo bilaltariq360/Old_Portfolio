@@ -1,23 +1,33 @@
-// document.addEventListener("contextmenu", () => {
-//   event.preventDefault();
-// });
-// document.onkeydown = (e) => {
-//   if (e.key == 123) {
-//     e.preventDefault();
-//   }
-//   if (e.ctrlKey && e.shiftKey && e.key == "I") {
-//     e.preventDefault();
-//   }
-//   if (e.ctrlKey && e.shiftKey && e.key == "C") {
-//     e.preventDefault();
-//   }
-//   if (e.ctrlKey && e.shiftKey && e.key == "J") {
-//     e.preventDefault();
-//   }
-//   if (e.ctrlKey && e.key == "I") {
-//     e.preventDefault();
-//   }
-// };
+document.addEventListener("DOMContentLoaded", function () {
+  var myCarousel = document.getElementById("carouselExampleDark");
+  var carousel = new bootstrap.Carousel(myCarousel, {
+    interval: false,
+  });
+  function nextSlide() {
+    carousel.next();
+  }
+  setInterval(nextSlide, 30000);
+});
+document.addEventListener("contextmenu", () => {
+  event.preventDefault();
+});
+document.onkeydown = (e) => {
+  if (e.key == 123) {
+    e.preventDefault();
+  }
+  if (e.ctrlKey && e.shiftKey && e.key == "I") {
+    e.preventDefault();
+  }
+  if (e.ctrlKey && e.shiftKey && e.key == "C") {
+    e.preventDefault();
+  }
+  if (e.ctrlKey && e.shiftKey && e.key == "J") {
+    e.preventDefault();
+  }
+  if (e.ctrlKey && e.key == "I") {
+    e.preventDefault();
+  }
+};
 const words = ["Flutter", "MERN Stack", ".NET FRAMEWORK", "UI Designer"];
 let currentWordIndex = 0;
 let currentCharIndex = 0;

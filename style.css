@@ -830,6 +830,8 @@ form textarea:focus {
   background: var(--card-color);
   color: var(--cardFont-color);
   border-radius: 5px;
+  min-height: 20rem;
+  max-height: 20rem;
 }
 
 .comments em {
