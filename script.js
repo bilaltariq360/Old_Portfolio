@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var myCarousel = document.getElementById("carouselExampleDark");
-  var carousel = new bootstrap.Carousel(myCarousel, {
-    interval: false,
-  });
-  function nextSlide() {
-    carousel.next();
-  }
-  setInterval(nextSlide, 3000);
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   var myCarousel = document.getElementById("carouselExampleDark");
+//   var carousel = new bootstrap.Carousel(myCarousel, {
+//     interval: false,
+//   });
+//   function nextSlide() {
+//     carousel.next();
+//   }
+//   setInterval(nextSlide, 10000);
+// });
 document.addEventListener("contextmenu", () => {
   event.preventDefault();
 });
