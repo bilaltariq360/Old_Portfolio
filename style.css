@@ -257,7 +257,7 @@ nav a:hover {
 }
 
 #home img {
-  z-index: 2;
+  z-index: 1;
 }
 
 #home h2 {
