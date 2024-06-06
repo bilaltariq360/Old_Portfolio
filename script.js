@@ -28,7 +28,13 @@ document.onkeydown = (e) => {
     e.preventDefault();
   }
 };
-const words = ["Flutter", "MERN Stack", ".NET FRAMEWORK", "UI Designer"];
+const words = [
+  "Django",
+  "MERN Stack",
+  "Flutter",
+  ".NET FRAMEWORK",
+  "UI Designer",
+];
 let currentWordIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;
